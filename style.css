@@ -78,4 +78,40 @@ body{
     border:2px solid #fff;
     border-radius:6px;
     box-shadow:0 0 10px #c40094;
+    font-size:18px;
+    color:#fff;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor:pointer;
+    transition: .5s;
 }
+.home-content .start-btn:hover{
+    background:#09001d;
+    box-shadow:none;
+}
+/*Styling the pop-info*/
+.popup-info{
+    position:absolute;
+    top:50%;
+    left:50%;  
+    transform: translate(-50%, -50%);
+    width:500px;
+    background:#fff;
+    border-radius:6px;
+}
+ .popup-info h2{
+    font-size:50px;
+    color:#c40094;
+ }
+ .popup-info .info{
+    display:inline-block;
+    font-size: 16px;
+    color:#333;
+    font-weight: 500;
+    margin: 4px 0;
+ }
+ .popup-info .btn-group{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+ }
