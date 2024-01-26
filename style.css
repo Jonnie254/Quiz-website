@@ -7,6 +7,7 @@
 }
 body{
     color:white;
+    background: #09001d;
 }
 /* styling for the header */
 .header{
@@ -45,6 +46,12 @@ body{
     background: url('/assests/zero.jpg') no-repeat;
     background-size: cover;
     background-position: center;
+    pointer-events: auto;
+    transition: .3s ease;
+}
+.main.active{
+    filter: blur(15px);
+    pointer-events: none;
 }
 /*Styling for the home section*/
 .home{
@@ -94,11 +101,19 @@ body{
     position:absolute;
     top:50%;
     left:50%;  
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(.9);
     width:500px;
     background:#fff;
     border-radius:6px;
     padding:10px 25px;
+    opacity:0;
+    pointer-events: none;
+    transition: .3s ease;
+}
+.popup-info.active{
+    opacity:1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
 }
  .popup-info h2{
     font-size:50px;
@@ -144,4 +159,8 @@ body{
  .popup-info .btn-group .info-btn:nth-child(1):hover{
     background:#c40094;
     color:#fff;
+ }
+ .popup-info .btn-group .info-btn:nth-child(2):hover{
+    background:#950170;
+    border-color: #950170;
  }
