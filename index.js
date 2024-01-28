@@ -28,12 +28,14 @@ continueBtn.onclick = () => {
     quizBox.classList.add('active');
     showQuestions(0);
     questionCounter(1);
+    headerScore();
 }
 
 
 
 let questionsCount = 0;
 let questionNumb = 1;
+let userScore = 0;
 
 
 // add a click event listener to the next button
@@ -46,6 +48,7 @@ nextBtn.onclick = () => {
         showQuestions(questionsCount);
         questionNumb++;
         questionCounter(questionNumb);
+        nextBtn.classList.remove('active');
     }else{
         console.log('Question Completed');
     }
@@ -77,6 +80,8 @@ function optionSelected(answer){
     let allOptions = optionList.children.length;
     if(userAnswer == correctAnswer){
         answer.classList.add('correct')
+        userScore += 1;
+        headerScore();
     }
     else{
         answer.classList.add('incorrect')
@@ -87,8 +92,6 @@ function optionSelected(answer){
                 optionList.children[i].setAttribute('class', 'option correct');
             }
         }
-
-
     }
 
     // if user selected an option then disable all options
@@ -97,11 +100,18 @@ function optionSelected(answer){
         // remove onclick attribute after user selected an option
         optionList.children[i].removeAttribute('onclick'); 
     }
+    nextBtn.classList.add('active');
 }
 
 //function to show the next question
 function questionCounter(index){
     const questionTotal = document.querySelector('.question-total');
     questionTotal.textContent = `${index} of ${questions.length} Questions`;
+}
+
+//function to show the result
+function headerScore(){
+    const headeScoreText = document.querySelector('.header-score');
+    headeScoreText.textContent = `Score: ${userScore} / ${questions.length}`;
 }
 
