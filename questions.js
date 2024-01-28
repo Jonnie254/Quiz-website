@@ -1,4 +1,5 @@
 /*define an array to represent each questions*/
+/*each question has 4 options*/
 let questions =[
     {
         numb : 1,
@@ -6,7 +7,7 @@ let questions =[
         answer:"C. Hyper Text Markup Language",
         options:[
              "A. Hyper Type Multi Language",
-             "B. Hyper Text Multiple Language",                  
+             "B. Hyper Text Multiple Language",                    
              "C. Hyper Text Markup Language",                    
              "D. Home Text Multi Language"
         ]

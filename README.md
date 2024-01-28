@@ -11,8 +11,16 @@ Our quiz website is designed to provide an interactive and engaging platform for
 2. **Entertainment**: It offers a fun and entertaining way for users to challenge themselves and compete with friends, fostering a sense of friendly competition.
 
 3. **Learning Resources**: Users can access quizzes on diverse topics, making it a valuable resource for learning new things in an interactive manner.
+## a table explain how you can start with the project
+## Contribution Guidelines
 
-## How Users Can Get Started with the Project
+We welcome contributions from the community. To contribute:
+
+1. Fork the project.
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`).
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+4. Push to the branch (`git push origin feature/AmazingFeature`).
+5. Open a pull request.
 
 Getting started with our quiz website is easy and user-friendly:
 
