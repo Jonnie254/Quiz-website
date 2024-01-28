@@ -250,10 +250,24 @@ body{
     margin:15px 0;
     cursor:pointer;
  }
+
  .option-list .option:hover{
     background:rgba(255, 255, 255, .1);
     border-color:rgba(255, 255, 255, .1)
  }
+ .option-list .option.correct {
+   background-color: #09001d;
+   color:#00a63d;
+   border-color: #00a63d;
+}
+.option-list .option.incorrect {
+   background-color: #09001d;
+   color:#ff0000;
+   border-color: #ff0000;
+}
+.option-list .option.disabled{
+    pointer-events: none;
+   }
  .quiz-box .quiz-footer{
     display:flex;
     justify-content:space-between;

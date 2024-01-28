@@ -62,7 +62,44 @@ function showQuestions(index){
         <div class="option"><span>${questions[index].options[2]}</span></div>
         <div class="option"><span>${questions[index].options[3]}</span></div>`;
     optionList.innerHTML = optionTag;
+
+    const option = optionList.querySelectorAll('.option');
+    for (let i= 0; i <option.length; i++){
+        option[i].setAttribute('onclick', 'optionSelected(this)');
+
+    }
 }
+
+//function to check if the answer is correct or not
+function optionSelected(answer){
+    let userAnswer = answer.textContent;
+    let correctAnswer = questions[questionsCount].answer;
+    let allOptions = optionList.children.length;
+    if(userAnswer == correctAnswer){
+        answer.classList.add('correct')
+    }
+    else{
+        answer.classList.add('incorrect')
+
+        //if the answer is incorrect then automatically select the correct answer
+        for(let i =0; i <allOptions;i++){
+            if(optionList.children[i].textContent == correctAnswer){
+                optionList.children[i].setAttribute('class', 'option correct');
+            }
+        }
+
+
+    }
+
+    // if user selected an option then disable all options
+    for(let i =0; i < allOptions;i++){
+        optionList.children[i].classList.add('disabled');
+        // remove onclick attribute after user selected an option
+        optionList.children[i].removeAttribute('onclick'); 
+    }
+}
+
+//function to show the next question
 function questionCounter(index){
     const questionTotal = document.querySelector('.question-total');
     questionTotal.textContent = `${index} of ${questions.length} Questions`;
